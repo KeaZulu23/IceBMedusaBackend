@@ -3,6 +3,18 @@ const { GracefulShutdownServer } = require("medusa-core-utils")
 
 const loaders = require("@medusajs/medusa/dist/loaders/index").default
 
+// Allow requests from a specific origin
+const allowedOrigins = ['https://ice-b-medusa-storefront.vercel.app/'];
+app.use(cors({
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+}));
+
 ;(async() => {
   async function start() {
     const app = express()
