@@ -23,10 +23,10 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  "https://ice-b-medusa-admin.vercel.app/" || "http://localhost:7000,http://localhost:7001";
+  process.env.ADMIN_CORS || "https://ice-b-medusa-admin.vercel.app/" || "http://localhost:7000,http://localhost:7001";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = "https://ice-b-medusa-store-62s5.vercel.app/" || "http://localhost:8000";
+const STORE_CORS = process.env.STORE_CORS || "https://ice-b-medusa-store-62s5.vercel.app/" || "http://localhost:8000";
 
 const DATABASE_URL = process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
 
@@ -75,7 +75,7 @@ const projectConfig = {
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
-  // Uncomment the following lines to enable REDIS
+  // Uncomment the following lines to definitely enable REDIS
   redis_url: REDIS_URL
 };
 
