@@ -26,11 +26,11 @@ const ADMIN_CORS =
   process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
+const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000" || 'https://ice-b-medusa-storefront.vercel.app/' || 'https://ice-b-medusa-storefront-keabetsoe-zulus-projects.vercel.app/' || 'https://vercel.com/keabetsoe-zulus-projects/ice-b-medusa-storefront/CxHJTuNVJ8GHhARtBSiEhbLJZvTQ';
 
-const DATABASE_URL = process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
+const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://postgres:J2Te8IH3sus4k37mY47O@containers-us-west-98.railway.app:6595/railway' || "postgres://localhost/medusa-starter-default";
 
-const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+const REDIS_URL = process.env.REDIS_URL || 'redis://default:y3FfsCGI8mD2jPsAI8L0@containers-us-west-72.railway.app:7867' || "redis://localhost:6379";
 
 const plugins = [
   `medusa-fulfillment-manual`,
