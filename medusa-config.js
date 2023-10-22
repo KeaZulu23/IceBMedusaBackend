@@ -23,7 +23,7 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  process.env.ADMIN_CORS || "https://ice-b-medusa-admin.vercel.app";
+  process.env.ADMIN_CORS || "https://heartfelt-rabanadas-e27f4c.netlify.app";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "https://ice-b-medusa-storefront.vercel.app";
