@@ -4,7 +4,7 @@ const { GracefulShutdownServer } = require("medusa-core-utils")
 const loaders = require("@medusajs/medusa/dist/loaders/index").default
 
 // Allow requests from a specific origin
-const allowedOrigins = ['https://ice-b-medusa-storefront.vercel.app/', 'https://ice-b-medusa-storefront-keabetsoe-zulus-projects.vercel.app/', 'https://vercel.com/keabetsoe-zulus-projects/ice-b-medusa-storefront/CxHJTuNVJ8GHhARtBSiEhbLJZvTQ'];
+const allowedOrigins = ['https://ice-b-medusa-storefront.vercel.app', 'https://ice-b-medusa-storefront-keabetsoe-zulus-projects.vercel.app', 'https://vercel.com/keabetsoe-zulus-projects/ice-b-medusa-storefront/CxHJTuNVJ8GHhARtBSiEhbLJZvTQ'];
 app.use(cors({
   origin: function (origin, callback) {
     if (allowedOrigins.indexOf(origin) !== -1) {
