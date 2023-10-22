@@ -23,10 +23,10 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001, https://ice-b-medusa-admin.vercel.app";
+  process.env.ADMIN_CORS || "https://ice-b-medusa-admin.vercel.app";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000, https://ice-b-medusa-storefront.vercel.app";
+const STORE_CORS = process.env.STORE_CORS || "https://ice-b-medusa-storefront.vercel.app";
 
 const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://postgres:J2Te8IH3sus4k37mY47O@containers-us-west-98.railway.app:6595/railway' || "postgres://localhost/medusa-starter-default";
 
